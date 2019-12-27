@@ -2,9 +2,9 @@
  * Types of DC motor control
  */
 enum DCmotion {
-	//% block="Forward"
+	//% block="On"
 	On,
-	//% block="Backward"
+	//% block="Off"
 	Off
 }
 
@@ -34,7 +34,7 @@ namespace artecrobo {
 		switch(_motion) {
 			case DCmotion.On:
 				/*
-					Move Forward
+					Move On
 					M1:P8 = speed, P12 = 0
 					M2:P0 = speed, P16 = 0
 				*/
@@ -44,7 +44,7 @@ namespace artecrobo {
 				break;
 			case DCmotion.Off:
 				/*
-					Move Backward
+					Move Off
 					M1:P8 = 0, P12 = speeed
 					M2:P0 = 0, P16 = speeed
 				*/
